@@ -98,9 +98,10 @@ WSGI_APPLICATION = 'donations.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'bayo_donation',
+        'NAME': 'bayo_donations',
         'USER': 'bayo_clearcode',
         'PASSWORD': 'pass.p455',
+        'HOST': 'localhost',
         'PORT': ''
     }
 }
