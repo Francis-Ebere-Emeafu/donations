@@ -1,0 +1,74 @@
+[
+{
+    "model": "faq.question",
+    "pk": 1,
+    "fields": {
+        "text": "Who is an atheist?",
+        "answer": "In the simplest sense, an atheist is a person who lacks belief in the existence of deities."
+    }
+},
+{
+    "model": "faq.question",
+    "pk": 2,
+    "fields": {
+        "text": "What makes a person an atheist?",
+        "answer": "People arrive at atheism via different routes. For some people, lack of empirical evidence for the existence of any deity makes them reject belief in the existence of any deity.\r\nSome others arrive at atheism via contemplating the problem of evil in the world, while others arrive at atheism via a keen awareness of the inconsistency of revelations of deities."
+    }
+},
+{
+    "model": "faq.question",
+    "pk": 3,
+    "fields": {
+        "text": "What is the common belief of atheists? Are there any doctrines to which an atheist need adhere?",
+        "answer": "The only belief that binds all atheists is the lack of belief in the existence of deities. Atheism has no creed, no doctrine, no dogma that dictates how an atheist need live his life."
+    }
+},
+{
+    "model": "faq.question",
+    "pk": 4,
+    "fields": {
+        "text": "Aren\u2019t atheists afraid of divine punishment? To whom do they turn when misfortune strikes them?",
+        "answer": "Atheists are well-aware of a statistical term, Correlation is not causation. This means that because one effect happened at the same time (or soon after) another event doesn\u2019t mean the one caused the other.\r\nIn relation to atheism, it means that just because a person deconverted to atheism and was struck with an illness doesn\u2019t mean atheism caused the illness. As such, atheists apply rationality in determining the cause and cure of an unfortunate event that afflicts them (or any other human being)"
+    }
+},
+{
+    "model": "faq.question",
+    "pk": 5,
+    "fields": {
+        "text": "Don\u2019t atheists believe/fear the afterlife?",
+        "answer": "No. Atheists cherish their time on earth, and try to make each second meaningful."
+    }
+},
+{
+    "model": "faq.question",
+    "pk": 6,
+    "fields": {
+        "text": "What do atheists draw strength from?",
+        "answer": "Atheists draw strength from themselves, their family (families), friends, and society as a whole. Human beings are social animals, and atheists are well-aware of that."
+    }
+},
+{
+    "model": "faq.question",
+    "pk": 7,
+    "fields": {
+        "text": "What meaning and purpose does an atheist give to her/his life",
+        "answer": "An object has only the meaning and purpose the person who uses it with the hopes of a result ascribes to it. For instance, a mop can have the meaning and purpose of cleaning the floor to one person, while to another person; the same mop has the meaning and purpose of sweeping cobwebs (due to its long handle).\r\nAtheists find the personal meaning and purpose they wish to ascribe to their life, as they do not believe there is an ultimate purpose to life all human beings share. Or should share."
+    }
+},
+{
+    "model": "faq.question",
+    "pk": 8,
+    "fields": {
+        "text": "Are Atheists certain there are no Gods?",
+        "answer": "Atheism is not an affirmative belief that there is no god nor does it answer any other question about what a person believes. It is simply a rejection of the assertion that there are gods. Atheism is too often defined incorrectly as a belief system. To be clear Atheism is not a disbelief in gods or a denial of gods, it is a lack of belief in gods. Older dictionaries define atheism as a belief that there is no God. Clearly, theistic influence taints these definitions. The fact that dictionaries define Atheism as there is no God betrays the (mono)theistic influence. Without the (mono)theistic influence, the definition would at least read there are no gods."
+    }
+},
+{
+    "model": "faq.question",
+    "pk": 9,
+    "fields": {
+        "text": "Is Atheism a religion?",
+        "answer": "While there are some religions that are atheistic (certain sects of Buddhism, for example), that does not mean that atheism is a religion. To put it in a more humorous way: If atheism is a religion, then not collecting stamps is a hobby. Despite the fact that atheism is not a religion, atheism is protected by many of the same Constitutional rights that protect religion. That, however, does not mean that atheism is itself a religion, only that our sincerely held (lack of) beliefs are protected in the same way as the religious beliefs of others. Similarly, many interfaith groups will include atheists. This, again, does not mean that atheism is a religious belief."
+    }
+}
+]

@@ -1,0 +1,130 @@
+{% load staticfiles %}
+                <header class="header-three">
+                    <div class="header-top">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <span><i class="fa fa-globe"></i> #2, Ojoku Street, Olodi-Apapa, Lagos, Nigeria</span>
+                                    <span><i class="fa fa-envelope-o"></i> info@atheist.org.ng</span>
+                                    <span><i class="fa fa-phone"></i> 08180105733</span>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="header-top-right">
+                                        <div class="social-icons">
+
+                                            <a href="https://www.facebook.com/AtheistNg/">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                            <a href="https://twitter.com/AtheistNg">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                            <a href="#">
+                                                <i class="fa fa-pinterest-p"></i>
+                                            </a>
+                                            <a href="#"><i class="fa fa-instagram"></i></a>
+                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+
+                                        </div>
+                                        {% comment %}
+                                        <div class="language-menu">
+                                            <form action="#" method="post" id="language">
+                                                <div class="btn-group">
+                                                    <button data-toggle="dropdown" class="btn btn-link dropdown-toggle" aria-expanded="false">
+
+                                                    <span>Language</span> <i class="fa fa-angle-down"></i></button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#">English</a></li>
+                                                        <li><a href="#">French</a></li>
+                                                    </ul>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        {% endcomment %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-logo-menu sticker">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-12">
+                                    <div class="logo">
+                                        <a href="{% url 'home' %}"><img src="{% static 'img/logo/new_asn_logo.jpeg' %}" alt="Atheist Society of Nigeria" width="100px" height="100px"></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-9 hidden-sm hidden-xs">
+                                    <div class="menu-button-wrapper">
+                                        <div class="mainmenu-area">
+                                            <div class="mainmenu">
+                                                <nav>
+                                                    <ul id="nav">
+                                                        <li class="current"><a href="{% url 'home' %}">Home</a>
+                                                        </li>
+                                                        <li><a href="#">News &amp; Events</a>
+                                                            <ul class="sub-menu">
+                                                                <li><a href="http://blog.atheist.org.ng" target="_blank">Blog</a></li>
+                                                                <li><a href="{% url 'events' %}">Event calendar</a></li>
+                                                                <li><a href="{% url 'meetups' %}">Social Events</a></li>
+                                                                <li><a href="{% url 'news_items' %}">News</a></li>
+                                                                <li>
+                                                                    <a href="{% url 'delegate' %}">Student Delegates</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="{% url 'convention' %}">2017 Convention</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><a href="#">Membership</a>
+                                                            <ul class="sub-menu">
+                                                                <li><a href="{% url 'register' %}">Registration</a></li>
+                                                                <li><a href="{% url 'renewal' %}">Renewal</a></li>
+                                                                <li><a href="{% url 'myid' %}">Find your ID</a></li>
+                                                           </ul>
+                                                       </li>
+                                                        <li><a href="{% url 'make_gift' %}">Donate</a></li>
+                                                        <li><a href="#">Activism</a>
+                                                             <ul class="sub-menu">
+                                                                <li><a href="{% url 'volunteer' %}">Volunteer Opportunities</a></li>
+                                                                <li><a href="/affiliates/">Affiliations</a></li>
+                                                                <li><a href="{% url 'committees' %}">Committees</a></li>
+                                                                <li><a href="#">Resources</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><a href="#">About Us</a>
+                                                            <ul class="sub-menu">
+                                                                <li><a href="{% url 'mission' %}">Our Mission</a></li>
+                                                                <li><a href="{% url 'future' %}">The Future</a></li>
+                                                                <li><a href="{% url 'bot' %}">Board of Trustees</a></li>
+                                                                <!-- <li><a href="{% url 'executives' %}">Our Executive</a></li> -->
+                                                                <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                                                                <li><a href="{% url 'faq' %}">About Atheism</a></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                                <div class="messages">
+                                    {% if messages %}
+                                    {% for message in messages %}
+                                    <div class="alert alert-success">
+                                        {{message}}
+                                    </div>
+                                    {% endfor %}
+                                    {% endif %}
+                                </div>
+                        </div>
+                    </div>
+                    <!-- Mobile Menu Area start -->
+                    {% block mobile-menu %}
+                    {% include "mobilemenu.html" %}
+
+                    {% endblock mobile-menu %}
+
+                    <!-- Mobile Menu Area end -->
+                </header>

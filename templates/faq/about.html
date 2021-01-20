@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block extra-css %}
+<style>
+    .banner-area{
+        background:url(/static/img/background/faq.png);
+    }
+</style>
+{% endblock extra-css %}
+
+{% block bodycontent %}
+
+<!--Banner Area Start-->
+<!--<div class="banner-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="banner-text text-center">
+                    <h3>About Atheism</h3>
+                </div>
+            </div>
+        </div>    
+    </div>
+</div>-->
+<!--End of Banner Area-->
+
+<!--Blog Details Area Start-->
+                <div class="blog-area section-padding-bottom blog-details">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-container">
+                                    <h1>About Atheism</h1>
+                                    <sub>Frequently Asked Questions</sub>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8">
+                            {% for item in items %}
+                                <div class="single-item">
+                                    <div class="single-item-text">
+                                        <div class="donate-item-info">
+                                            <div class="title-text-content">
+                                                <h4>{{item.text}}</h4>
+                                                <div class="post-info">
+                                                    <span><i class="fa fa-user"></i> Author</span>
+                                                    <span><i class="fa fa-commenting-o"></i>0 Comment</span>
+                                                </div>
+                                            </div>
+                                            <div class="description-content">
+                                                <div class="description-text">
+                                            <p>
+                                                {{item.answer}}
+                                            </p>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>
+                            {% endfor %}
+                                <div class="well well-sm"><small class="label label-info">If you have any ideas to improve our content please email info@atheist.org.ng</small></div>
+                               
+                            </div>
+                            <div class="col-md-4">
+                               
+                                <div class="single-sidebar-widget">
+                                    <div class="sidebar-widget-title">
+                                        <h4>Summary</h4>
+                                        <div class="recent-posts">
+                                            <div class="recent-post-item">
+                                                <h6><a href="#">Common questions that atheists get asked</a></h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-sidebar-widget">
+                                    <div class="image-information">
+                                        <p>Giving back to the local community and the wider world is essential to our core beliefs</p>
+                                        <a href="{% url 'contact' %}">contact us now</a>
+                                    </div>
+                                </div>
+                             
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End of Blog Details Area-->
+
+
+{% endblock bodycontent %}

@@ -1,0 +1,246 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block head_title %}Register{% endblock head_title %}
+
+{% block bodycontent %}
+<!--Background Area Start-->
+<div class="featured-area featured-area-three home-three" style="padding: 0px">
+<div class="background-area">       
+    <img src="{% static 'img/register.jpg' %}" alt=""/>
+    <div class="banner-content slider-1 static-text">
+         
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="text-content-wrapper">
+                        <div class="text-content text-center">
+                            <h1 class="title1 border-none">
+                                <span class=""></span>
+                            </h1>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+         
+    </div>
+</div>
+</div>
+<!--End of Background Area-->
+
+
+ <!--Register Page Area Start-->
+                <div class="contact-form-area section-gray" style="padding-top: 100px;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="section-title text-center">
+                                    <h2><span>Register an </span> Account</h2>
+                                </div>
+                                    <form action="#" method="post">{% csrf_token %}
+                                      {% if form.non_field_errors %}
+                                        {% for error in form.non_field_errors %}
+                                            <div class="alert alert-danger">
+                                                {{ error }}
+                                            </div>
+                                        {% endfor %}
+                                      {% endif %}
+
+                                        <div class="row">  
+                                            <div class="col-md-4">
+                                                <div class="panel panel-info">
+                                                    <div class="panel-heading">Membership</div>
+                                                    <div class="panel-body">
+                                                         <div class="col-md-12">
+                                                            <div class="form-group has-feedback">
+                                                                {% if form.membership.errors %}
+                                                                    <div class="alert alert-danger">
+                                                                        {{ form.membership.errors }}
+                                                                    </div>
+                                                                {% endif %}
+                                                                <label for="id_membership">Membership Type</label>
+                                                                {{ form.membership }}
+                                                                <div class="callout callout-info"><sub class="text-danger">Note that student membership will require you send us a scanned copy of your ID card</sub></div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-12">
+                                                            <div class="form-group has-feedback">
+                                                                {% if form.payment_type.errors %}
+                                                                    <div class="alert alert-danger">
+                                                                        {{ form.payment_type.errors }}
+                                                                    </div>
+                                                                {% endif %}
+                                                                
+                                                                <label for="id_payment_type">Mode of Payment</label>
+                                                                
+                                                                    {{ form.payment_type }}
+                                                                
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="panel panel-info">
+                                                    <div class="panel-heading">Your Information</div>
+                                                    <div class="panel-body">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group has-feedback">
+                                                                {% if form.first_name.errors %}
+                                                                    <div class="alert alert-danger">
+                                                                        {{ form.first_name.errors }}
+                                                                    </div>
+                                                                {% endif %}
+                                                                {{ form.first_name }}
+                                                                <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                            <div class="form-group has-feedback">
+                                                                {% if form.last_name.errors %}
+                                                                    <div class="alert alert-danger">
+                                                                        {{ form.last_name.errors }}
+                                                                    </div>
+                                                                {% endif %}
+                                                                {{ form.last_name }}
+                                                                <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-12">
+                                                            <div class="form-group has-feedback">
+                                                                {% if form.email.errors %}
+                                                                    <div class="alert alert-danger">
+                                                                        {{ form.email.errors }}
+                                                                    </div>
+                                                                {% endif %}
+                                                                {{ form.email }}
+                                                                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                                                            </div>
+                                                        </div>
+                                                    
+                                                        <div class="col-md-12">
+                                                            <div class="form-group has-feedback">
+                                                                {% if form.phone.errors %}
+                                                                    <div class="alert alert-danger">
+                                                                        {{ form.phone.errors }}
+                                                                    </div>
+                                                                {% endif %}
+                                                                {{ form.phone }}
+                                                                <span class="glyphicon glyphicon-earphone form-control-feedback"></span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-12">
+                                                            <div class="form-group has-feedback">
+                                                                {% if form.address.errors %}
+                                                                    <div class="alert alert-danger">
+                                                                        {{ form.address.errors }}
+                                                                    </div>
+                                                                {% endif %}
+                                                                {{ form.address }}
+                                                                <span class="glyphicon glyphicon-home form-control-feedback"></span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-12">
+                                                            <div class="form-group has-feedback">
+                                                                {% if form.country.errors %}
+                                                                    <div class="alert alert-danger">
+                                                                        {{ form.country.errors }}
+                                                                    </div>
+                                                                {% endif %}
+                                                                {{ form.country }}
+                                                                <span class="glyphicon glyphicon-globe form-control-feedback"></span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-12">
+                                                            <div class="form-group has-feedback">
+                                                                {% if form.bio.errors %}
+                                                                    <div class="alert alert-danger">
+                                                                        {{ form.bio.errors }}
+                                                                    </div>
+                                                                {% endif %}
+                                                                {{ form.bio }}
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-6 col-md-offset-3 text-center">
+                                                            <button type="submit"  class="btn btn-block btn-success ">Register!</button>
+                                                            <p><small> By clicking on "register" i agree to support the <a href="{% url 'vision_mission' %}"> vision and mission of ASN</a></small></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                                       
+                                           
+                                            </div>
+                                            </div>
+                                        </div>   
+                                    </form>    
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+                <!--End of Register Page Area-->
+
+{% endblock bodycontent %}
+
+
+{% block extra-js %}
+<script>
+  $(function () {
+
+
+    $('#id_bio').attr('placeholder', 'Tell us a bit about yourself');
+    $('#id_bio').addClass('form-control');
+
+    $('#id_address').attr('placeholder', 'Contact Address');
+    $('#id_address').addClass('form-control');
+
+    $('#id_first_name').attr('placeholder', 'First Name');
+    $('#id_first_name').addClass('form-control');
+
+    $('#id_last_name').attr('placeholder', 'Last Name');
+    $('#id_last_name').addClass('form-control');
+
+    $('#id_email').attr('placeholder', 'Email');
+    $('#id_email').addClass('form-control');
+
+    $('#id_pwd1').addClass('form-control');
+    $('#id_pwd1').attr('placeholder', 'Password');
+
+    $('#id_pwd2').addClass('form-control');
+    $('#id_pwd2').attr('placeholder', 'Verify Password');
+
+    $('#id_phone').attr('placeholder', 'Mobile');
+    $('#id_phone').addClass('form-control');
+
+    $('#id_wallet').attr('placeholder', 'Bitcoin Wallet ID');
+    $('#id_wallet').addClass('form-control');
+
+    $('#id_country').attr('placeholder', 'Country');
+    $('#id_country').addClass('form-control');
+
+    $('#id_city').attr('placeholder', 'City');
+    $('#id_city').addClass('form-control');
+
+    $('#id_membership').addClass('form-control');
+    // $('#id_payment_type').addClass('form-control');
+
+    
+    // $('#id_referrer').attr('placeholder', 'Referrer');
+    // $('#id_referrer').addClass('form-control');
+
+    $('input').iCheck({
+      checkboxClass: 'icheckbox_square-blue',
+      radioClass: 'iradio_square-blue',
+      increaseArea: '20%' // optional
+    });
+  });
+</script>
+
+{% endblock extra-js %}

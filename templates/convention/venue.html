@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+
+{% block head_title %}Venue of Convention{% endblock head_title %}
+
+
+
+{% block bodycontent %}
+
+<!--Banner Area Start-->
+
+<!--
+<div class="banner-area"> 
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="banner-text text-left">
+                    <h3>Programe of Events, 2017 National Convention!</h3>
+                </div>
+            </div>
+        </div>    
+    </div>
+</div>
+background: url("{% static 'img/icon/banner-icon.png' %}") no-repeat scroll 0 0; -->
+
+<div class="featured-area featured-area-three home-three" style="padding: 0px">
+<div class="background-area">       
+    <img src="{% static 'img/road2.jpg' %}" alt=""/>
+    <div class="banner-content slider-1 static-text">
+         
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="text-content-wrapper">
+                        <div class="text-content text-center">
+                            <h1 class="title1 border-none">
+                            Venue of 2017 National Convention!
+                            <br>
+                            <!--<small>Road to Reason</small> -->
+                            </h1>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+         
+    </div>
+</div>
+</div>
+<!--End of Banner Area-->
+
+<div class="blog-area section-padding-bottom blog-details">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-container">
+                    <h4 style="text-align: center; line-height: 1.5;">
+                        2017 Atheist National Convention<br/>
+                        holding at Unilag Guest House University of Lagos
+                    </h4>
+                    <!-- <h1>Event Calendar</h1>
+                    <sub>What we have planned</sub> -->
+                </div>
+            </div>
+        </div>
+        <div class="row">
+   <!--Contact Info Map Area Start-->
+                <div class="contact-info-map-area">
+                    <!--Google Map Start -->
+                    <div class="google-map-area">
+                        <!--  Map Section -->
+                        <div id="contacts" class="map-area">
+                            <div id="googleMap" style="width:100%;height:500px;filter: grayscale(100%);-webkit-filter: grayscale(100%);"></div>
+                        </div>
+                    </div>
+                    <!--End of Google Map-->
+                   <!-- <div class="contact-information-container">
+                        <div class="information">
+                            <img src="img/banner/8.jpg" alt="">
+                            <div class="contact-info-content">
+                                <h3>Contact info</h3>
+                                <div class="single-contact-info">
+                                    <span class="title">Address:</span>
+                                    <span class="text">792 South Park Avenu<br>
+                                    ,Door 6 Wonderland, Austrila</span>
+                                </div>
+                                <div class="single-contact-info">
+                                    <span class="title">Phone:</span>
+                                    <span class="text"> (+1)866-540-3229 - Office<br>
+                                    0123. 456. 789 - Fax</span>
+                                </div>
+                                <div class="single-contact-info">
+                                    <span class="title">Address:</span>
+                                    <span class="text">admin@power-boosts.com<br>
+                                    support@power-boosts.com</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>    -->
+                <!--End of Contact Info Map Area-->
+
+           <!-- <div class="col-md-3">
+            {% include 'convention/side.html' %}
+            </div> -->
+        </div>
+    </div>
+</div>
+
+  <!-- Google Map js
+        ============================================ -->        
+        
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuU_0_uLMnFM-2oWod_fzC0atPZj7dHlU"></script>
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <script>
+            function initialize() {
+              var mapOptions = {
+                zoom: 15,
+                scrollwheel: false,
+                center: new google.maps.LatLng(6.521939, 3.39883)
+              };
+
+              var map = new google.maps.Map(document.getElementById('googleMap'),
+                  mapOptions);
+
+
+              var marker = new google.maps.Marker({
+                position: map.getCenter(),
+                animation:google.maps.Animation.BOUNCE,
+                icon: 'img/map-marker.png',
+                map: map
+              });
+                
+            }
+                
+            google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
+{% endblock bodycontent %}                                            
+

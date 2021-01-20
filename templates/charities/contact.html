@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+<div class="bg-white">
+                <!--Header Area Start-->
+    {% include 'menu.html' %}
+    <!--End of Header Area-->
+    <!--Banner Area Start-->
+    <div class="banner-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="banner-text">
+                        <h3>Contact Us</h3>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </div>
+    <!--End of Banner Area-->
+    <!--Contact Info Area Start-->
+    <div class="contact-info-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="contact-service-info">
+                        <span class="image">
+                            <span class="table-cell">
+                                <img src="{% static 'img/icon/volunteer-gray.png' %}" alt="" class="primary-image">
+                                <img src="{% static 'img/icon/volunteer.png' %}" alt="" class="secondary-image">
+                            </span>
+                        </span>
+                        <span class="text">Become a volunteer</span>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="contact-service-info">
+                        <span class="image">
+                            <span class="table-cell">
+                                <img src="{% static 'img/icon/gift-gray.png' %}" alt="" class="primary-image">
+                                <img src="{% static 'img/icon/gift.png' %}" alt="" class="secondary-image">
+                            </span>
+                        </span>
+                        <span class="text">Make a gift</span>
+                    </div>
+                </div>
+                <div class="col-md-4 hidden-sm">
+                    <div class="contact-service-info">
+                        <span class="image">
+                            <span class="table-cell">
+                                <img src="{% static 'img/icon/scholar-gray.png' %}" alt="" class="primary-image">
+                                <img src="{% static 'img/icon/scholar.png' %}" alt="" class="secondary-image">
+                            </span>
+                        </span>
+                        <span class="text">give a scholarship</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End of Cntact Info Area-->
+    <!--Contact Info Map Area Start-->
+    <div class="contact-info-map-area">
+        <!--Google Map Start -->
+        <div class="google-map-area">
+            <!--  Map Section -->
+            <div id="contacts" class="map-area">
+                <div id="googleMap" style="width:100%;height:500px;filter: grayscale(100%);-webkit-filter: grayscale(100%);"></div>
+            </div>
+        </div>
+        <!--End of Google Map-->
+        <div class="contact-information-container">
+            <div class="information">
+                <img src="{% static 'img/banner/8.jpg' %}" alt="">
+                <div class="contact-info-content">
+                    <h3>Contact info</h3>
+                    <div class="single-contact-info">
+                        <span class="title">Address:</span>
+                        <span class="text">792 South Park Avenu<br>
+                        ,Door 6 Wonderland, Austrila</span>
+                    </div>
+                    <div class="single-contact-info">
+                        <span class="title">Phone:</span>
+                        <span class="text"> (+1)866-540-3229 - Office<br>
+                        0123. 456. 789 - Fax</span>
+                    </div>
+                    <div class="single-contact-info">
+                        <span class="title">Address:</span>
+                        <span class="text">admin@power-boosts.com<br>
+                        support@power-boosts.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <!--End of Contact Info Map Area-->
+    <!--Contact Form Area Start-->
+    <div class="contact-form-area section-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="section-title text-center">
+                        <h2><span>Leave a </span>reply</h2>
+                    </div>
+                    <form action="" method="post" id="contact-form">
+
+                        
+                        <div class="row">
+                            <div class="col-md-12">
+                                {{contactForm}}
+                            </div>
+                            
+                            <div class="col-md-12">
+                                <div class="contact-button text-center">
+                                    <button type="submit">Post Comment</button>
+                                </div>
+                            </div>
+                        </div>    
+                    </form>
+                    <p class="form-messege"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End of Contact Form Area-->
+    <!--Footer Widget Area Start-->
+    {% include 'footer.html' %}
+    <!--End of Footer Area-->
+</div>
+{% endblock %}

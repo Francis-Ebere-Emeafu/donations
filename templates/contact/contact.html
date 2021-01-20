@@ -1,0 +1,198 @@
+{% extends "base.html" %} {% load staticfiles %} {% block extra-css %}
+<style>
+  .banner-area {
+    background: url(/static/img/background/contact.jpg);
+  }
+</style>
+{% endblock extra-css %} {% block bodycontent %}
+
+<!--Banner Area Start-->
+<div class="contact">
+  <div class="banner-area">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="banner-text text-center">
+            <h3>Contact Us</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--End of Banner Area-->
+
+<!--Contact Info Map Area Start-->
+<div class="contact-info-map-area">
+  <!--Google Map Start -->
+  <div class="google-map-area">
+    <!--  Map Section -->
+    <div id="contacts" class="map-area">
+      <div
+        id="googleMap"
+        style="
+          width: 100%;
+          height: 500px;
+          filter: grayscale(100%);
+          -webkit-filter: grayscale(100%);
+        "
+      ></div>
+    </div>
+  </div>
+  <!--End of Google Map-->
+  <div class="contact-information-container">
+    <div class="information">
+      <div class="contact-info-content">
+        <h3>Contact info</h3>
+        <div class="single-contact-info">
+          <span class="title">Address:</span>
+          <span class="text"
+            >#18 Afolabi Aina Street, By Alade Market, Ikeka, Lagos
+            Nigeria</span
+          >
+        </div>
+        <div class="single-contact-info">
+          <span class="title">Phone:</span>
+          <span class="text"> (+234) 8180105733 </span>
+        </div>
+        <div class="single-contact-info">
+          <span class="title">Email:</span>
+          <span class="text">info@atheist.org.ng</span>
+        </div>
+        <div class="single-contact-info">
+          <span class="title">Facebook:</span>
+          <span class="text">AtheistNg</span>
+        </div>
+        <div class="single-contact-info">
+          <span class="title">Twitter:</span>
+          <span class="text">AtheistNg</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--End of Contact Info Map Area-->
+
+<!--Contact Form Area Start-->
+<div class="contact-form-area section-gray" style="padding-top: 30px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="section-title text-center">
+          <h2><span>Leave a </span> message</h2>
+        </div>
+        <form action="#" method="post">
+          {% csrf_token %}
+          {% if form.non_field_errors %}
+            {% for error in form.non_field_errors %}
+            <div class="alert alert-danger">
+              {{ error }}
+            </div>
+            {% endfor %}
+          {% endif %}
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group has-feedback">
+                {% if form.name.errors %}
+                <div class="alert alert-danger">
+                  {{ form.name.errors }}
+                </div>
+                {% endif %} {{ form.name }}
+                <span
+                  class="glyphicon glyphicon-user form-control-feedback"
+                ></span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group has-feedback">
+                {% if form.email.errors %}
+                <div class="alert alert-danger">
+                  {{ form.email.errors }}
+                </div>
+                {% endif %} {{ form.email }}
+                <span
+                  class="glyphicon glyphicon-envelope form-control-feedback"
+                ></span>
+              </div>
+            </div>
+            <!--  <div class="col-md-12">
+                            <input type="text" name="website" placeholder="Website*">
+                        </div> -->
+            <div class="col-md-12">
+              <div class="form-group has-feedback">
+                {% if form.content.errors %}
+                <div class="alert alert-danger">
+                  {{ form.content.errors }}
+                </div>
+                {% endif %} {{ form.content }}
+                <span
+                  class="glyphicon glyphicons-message-out form-control-feedback"
+                ></span>
+              </div>
+            </div>
+            <div class="col-md-6 col-md-offset-3">
+              <div class="button text-center">
+                <button type="submit" class="btn btn-block bg-green">
+                  Send Message!
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+        <p class="form-messege"></p>
+      </div>
+    </div>
+  </div>
+</div>
+<!--End of Contact Form Area-->
+
+{% endblock bodycontent %} {% block extra-js %}
+<script>
+  $(function () {
+    $("#id_name").attr("placeholder", "Full Name");
+    $("#id_name").addClass("form-control");
+
+    $("#id_email").attr("placeholder", "Email");
+    $("#id_email").addClass("form-control");
+
+    $("#id_content").attr("placeholder", "Content");
+    $("#id_content").addClass("form-control");
+
+    $("input").iCheck({
+      checkboxClass: "icheckbox_square-blue",
+      radioClass: "iradio_square-blue",
+      increaseArea: "20%", // optional
+    });
+  });
+</script>
+
+<script
+  type="text/javascript"
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuU_0_uLMnFM-2oWod_fzC0atPZj7dHlU"
+></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script>
+  function initialize() {
+    var mapOptions = {
+      zoom: 15,
+      scrollwheel: false,
+      center: new google.maps.LatLng(6.445112, 3.342334),
+    };
+
+    var map = new google.maps.Map(
+      document.getElementById("googleMap"),
+      mapOptions
+    );
+
+    var marker = new google.maps.Marker({
+      position: map.getCenter(),
+      animation: google.maps.Animation.BOUNCE,
+      icon: "/static/img/map-marker.png",
+      map: map,
+    });
+  }
+
+  google.maps.event.addDomListener(window, "load", initialize);
+</script>
+
+{% endblock extra-js %}

@@ -1,0 +1,108 @@
+<!--End of Client Area-->
+<!--Footer Widget Area Start-->
+<div class="footer-widget-area section-dark section-padding home-three">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-4">
+        <div class="single-footer-widget">
+          <h3>Send newsletter</h3>
+          <form action="#" id="mc-form" class="mc-form fix">
+            <div class="subscribe-form">
+              <input
+                id="mc-email"
+                type="email"
+                name="email"
+                placeholder="Email Address..."
+              />
+              <button id="mc-submit" type="submit">
+                <i class="fa fa-chevron-right"></i>
+              </button>
+            </div>
+          </form>
+          <!-- mailchimp-alerts Start -->
+          <div class="mailchimp-alerts text-centre fix">
+            <div class="mailchimp-submitting"></div>
+            <!-- mailchimp-submitting end -->
+            <div class="mailchimp-success"></div>
+            <!-- mailchimp-success end -->
+            <div class="mailchimp-error"></div>
+            <!-- mailchimp-error end -->
+          </div>
+          <!-- mailchimp-alerts end -->
+          <a href="{% url 'contact' %}">See Google Maps</a>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-4">
+        <div class="single-footer-widget">
+          <div class="contact-info dividers">
+            <div class="contact-title">Address:</div>
+            <div class="contact-text">
+              18 Afolabi Aina Street, By Alade Market, Ikeka, Lagos
+            </div>
+          </div>
+          <div class="contact-info">
+            <div class="contact-title">Phone:</div>
+            <div class="contact-text">08180105733</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-4">
+        <div class="single-footer-widget">
+          <div class="contact-info dividers">
+            <div class="contact-title">Email:</div>
+            <div class="contact-text color-olive">
+              info@atheist.org.ng<br />
+              support@atheist.org.ng
+            </div>
+          </div>
+          <div class="contact-info">
+            <div class="contact-title">Follow:</div>
+            <div class="contact-text">
+              <div class="social-icons">
+                <a href="https://www.facebook.com/AtheistNg/">
+                  <i class="fa fa-facebook"></i
+                ></a>
+                <a href="https://twitter.com/AtheistNg">
+                  <i class="fa fa-twitter"></i
+                ></a>
+                <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--End of Footer Widget Area-->
+<!--Footer Area Start-->
+<footer class="footer-area section-dark home-three">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-6">
+        <span
+          >COPYRIGHT &copy; 2017 ALL RIGHT RESERVED BY
+          <a href="#">Atheist Society of Nigeria</a></span
+        >
+      </div>
+      <div class="col-md-6 col-sm-6">
+        <div class="footer-menu">
+          <nav>
+            <ul>
+              <li><a href="{% url 'home' %}">Home</a></li>
+              <li><a href=" ">Legal</a></li>
+              <li><a href="{% url 'news_items' %}">News</a></li>
+              <li><a href="">Activism</a></li>
+              <li><a href=" "></a></li>
+              <li><a href="{% url 'contact' %}">Contact us</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--End of Footer Area-->

@@ -1,0 +1,12 @@
+Django==2.2.17
+django-post-office==3.5.3
+django-tinymce==3.2.0
+importlib-metadata==2.1.1
+jsonfield==3.0.0
+psycopg2-binary==2.8.6
+pyparsing==2.4.7
+pytz==2020.5
+six==1.15.0
+sqlparse==0.4.1
+toml==0.10.2
+zipp==1.2.0

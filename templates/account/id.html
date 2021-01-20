@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block head_title %}Search for Membership{% endblock head_title %}
+
+{% block bodycontent %}
+<div class="donate-page-area section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="donate-information-container">
+                    <form action="" method="post">{% csrf_token %}
+                        <div class="donor-information">
+                            <div class="section-title text-center">
+                                <h2><span>Search for your Membership ID </span></h2>
+                            </div>
+                            {% if form.non_field_errors %}
+                                {% for error in form.non_field_errors %}
+                                    <div class="alert alert-danger">
+                                        {{ error }}
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+                            <div class="donor-information-content">
+                                {% if id %}
+                                <div class="row">
+                                    <div class="col-md-4 col-md-offset-4">
+                                        <h3>Your ID is <strong>{{id}}</strong></h3>
+                                    </div>
+                                </div>
+                                {% endif %}
+                                <div class="row">
+
+                                    <div class="col-md-4 col-md-offset-4">
+                                        <div class="form-group has-feedback">
+                                            {% if form.email.errors %}
+                                                <div class="alert alert-danger">
+                                                    {{ form.email.errors }}
+                                                </div>
+                                            {% endif %}
+                                            <label for="id_account">Your registered Email Address</label>
+                                            {{ form.email }}
+                                        </div>
+                                        {% comment %} {{ form }} {% endcomment %}
+                                    </div>
+                            
+                                </div>
+                                
+                                <div class="button text-center">
+                                    <button type="submit" class="button-default submit">Search</button>
+                                </div>
+                            </div>
+                        </div>   
+                    </form>    
+                </div>
+            </div>
+        </div>    
+    </div>
+</div>
+{% endblock bodycontent %}

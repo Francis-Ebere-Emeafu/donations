@@ -1,0 +1,738 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="bg-white">
+    <!--Header Area Start-->
+    {% include 'menu.html' %}
+    <!--End of Header Area-->
+    <!--Slider Container Wrapper Start-->
+    <div class="slider-container-wrapper content-top">
+        <!--Slider Area Start-->
+        <div class="slider-area">
+            <div class="preview-2">
+                <div id="nivoslider" class="slides">    
+                    <img src="{% static 'img/slider/5.jpg' %}" alt="" title="#slider-1-caption1"/>
+                    <img src="{% static 'img/slider/6.jpg' %}" alt="" title="#slider-1-caption1"/>
+                </div>  
+                <div id="slider-1-caption1" class="nivo-html-caption nivo-caption">
+                    <div class="banner-content slider-1">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="text-content-wrapper">
+                                        <div class="text-content slide-2 text-center">
+                                            <h1 class="title1">Free from poverty a just world</h1>
+                                            <p class="sub-title hidden-xs"> Typi non habent claritatem insitam; est usus legentis in iis qui facit <br>
+                                            eorum claritatem. Investigationes </p>
+                                            <div class="banner-readmore">
+                                                <a class="button-default button-border dark-hover" title="Learn more" href="#">Learn More</a>   
+                                                <a class="button-default button-dark" title="Learn more" href="#">Join with us</a>  
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </div>
+        <!--End of Slider Area-->
+        <!--Help Area Start-->
+        <div class="help-area help-area-three">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4">
+                        <div class="single-help-item">
+                            <a href="#"><img src="{% static 'img/help/1.jpg' %}" alt=""></a>
+                            <div class="help-title">
+                                <h4><a href="#">Become a Volunteer</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="single-help-item">
+                            <a href="#"><img src="{% static 'img/help/2.jpg' %}" alt=""></a>
+                            <div class="help-title">
+                                <h4><a href="#">Make a gift</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="single-help-item">
+                            <a href="#"><img src="{% static 'img/help/3.jpg' %}" alt=""></a>
+                            <div class="help-title">
+                                <h4><a href="#">Give a Scholarship</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End of Help Area-->
+    </div>
+    <!--End of Slider Container Wrapper-->
+    <!--Featured Area -->
+    <div class="featured-area section-gray featured-area-three padding-large home-three">
+        <div class="container">
+            <div class="row">
+                <div class="featured-carousel carousel-style-one">
+                    <div class="featured-item">
+                        <div class="col-sm-6 col-lg-5">
+                            <div class="section-title text-left">
+                                <h2><span>Featured</span> campaigns</h2>
+                            </div>
+                            <div class="featured-text">
+                                <h1>Gone to ghana in africa</h1>
+                                <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which.</p>
+                                <div class="donate-bar-item">
+                                    <span>Donated</span>
+                                    <div class="progress style">
+                                        <div class="progress-bar style wow fadeInLeft" data-progress="65%" style="width: 65%;" data-wow-duration="1.5s" data-wow-delay="1.2s">
+                                            <span class="text-top">61.39%</span>
+                                        </div>
+                                    </div>
+                                    <div class="donate-text">
+                                        <span>Raised: <span class="color">$306.95</span></span>
+                                        <span>Goal: <span class="color">$695.00</span></span>
+                                    </div>
+                                    <button title="Learn more" class="button-default" type="button">Donate Now!</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-offset-1 col-md-offset-0 col-md-6 col-sm-6">
+                            <img src="{% static 'img/banner/2.jpg' %}" alt="">
+                        </div>
+                    </div>   
+                    <div class="featured-item">
+                        <div class="col-sm-6 col-lg-5">
+                            <div class="section-title text-left">
+                                <h2><span>Featured</span> campaigns</h2>
+                            </div>
+                            <div class="featured-text">
+                                <h1>Gone to ghana in africa</h1>
+                                <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which.</p>
+                                <div class="donate-bar-item">
+                                    <span>Donated</span>
+                                    <div class="progress style">
+                                        <div class="progress-bar style wow fadeInLeft" data-progress="65%" style="width: 65%;" data-wow-duration="1.5s" data-wow-delay="1.2s">
+                                            <span class="text-top">61.39%</span>
+                                        </div>
+                                    </div>
+                                    <div class="donate-text">
+                                        <span>Raised: <span class="color">$306.95</span></span>
+                                        <span>Goal: <span class="color">$695.00</span></span>
+                                    </div>
+                                    <button title="Learn more" class="button-default" type="button">Donate Now!</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-offset-1 col-md-offset-0 col-md-6 col-sm-6">
+                            <img src="{% static 'img/banner/2.jpg' %}" alt="">
+                        </div>
+                    </div>    
+                </div>        
+            </div>
+        </div>
+    </div>
+    <!--Featured Area-->
+    <!--Campaigns Area Start-->
+    <div class="campaigns-area home-three">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title large text-center">
+                        <h2><span>Latest</span> campaigns</h2>
+                        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy<br>
+                        with my whole heart. I am alone, and feel the charm of existence in this spot, which was created</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="single-item-carousel">
+                    <div class="col-md-4">
+                        <div class="single-item overlay-hover">
+                            <div class="single-item-image overlay-effect">
+                                <a href="#"><img src="{% static 'img/campaign/1.jpg' %}" alt=""></a>
+                            </div>
+                            <div class="single-item-text">
+                                <div class="donate-item-info">
+                                    <h4><a href="#">Gone to ghana in africa</a></h4>
+                                    <div class="post-info">
+                                        <span><i class="fa fa-user"></i> Author</span>
+                                        <span><i class="fa fa-commenting-o"></i>0 Comment</span>
+                                    </div>
+                                    <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit</p>
+                                    <span class="post-address"><i class="fa fa-map-marker"></i>792 South Park Avenue,Door 6 Wonderland, Austrila</span>
+                                </div>
+                                <div class="donate-bar-item">
+                                    <span class="text-top">Raised <span class="floatright">Supporters</span></span>
+                                    <div class="progress-wrap">
+                                        <div class="progress style">
+                                            <div class="progress-bar style wow fadeInLeft" data-progress="65%" style="width: 65%;" data-wow-duration="1.5s" data-wow-delay="1.2s">
+                                                <span class="text-top">61.39%</span>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                    <span>Goal <span class="floatright">$695.00</span></span>
+                                    <button title="Learn more" class="button-default" type="button">Donate Now!</button>
+                                    <div class="post-share-view">
+                                        <span><i class="fa fa-clock-o"></i>298 Days</span>
+                                        <span><i class="fa fa-eye"></i>160 Views</span>
+                                        <span><i class="fa fa-share"></i>Share</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-item overlay-hover">
+                            <div class="single-item-image overlay-effect">
+                                <a href="#"><img src="{% static 'img/campaign/4.jpg' %}" alt=""></a>
+                            </div>
+                            <div class="single-item-text">
+                                <div class="donate-item-info">
+                                    <h4><a href="#">Gone to ghana in africa</a></h4>
+                                    <div class="post-info">
+                                        <span><i class="fa fa-user"></i> Author</span>
+                                        <span><i class="fa fa-commenting-o"></i>0 Comment</span>
+                                    </div>
+                                    <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit</p>
+                                    <span class="post-address"><i class="fa fa-map-marker"></i>792 South Park Avenue,Door 6 Wonderland, Austrila</span>
+                                </div>
+                                <div class="donate-bar-item">
+                                    <span class="text-top">Raised <span class="floatright">Supporters</span></span>
+                                    <div class="progress-wrap">
+                                        <div class="progress style">
+                                            <div class="progress-bar style wow fadeInLeft" data-progress="65%" style="width: 65%;" data-wow-duration="1.5s" data-wow-delay="1.2s">
+                                                <span class="text-top">61.39%</span>
+                                            </div>
+                                        </div>
+                                    </div>       
+                                    <span>Goal <span class="floatright">$695.00</span></span>
+                                    <button title="Learn more" class="button-default" type="button">Donate Now!</button>
+                                    <div class="post-share-view">
+                                        <span><i class="fa fa-clock-o"></i>298 Days</span>
+                                        <span><i class="fa fa-eye"></i>160 Views</span>
+                                        <span><i class="fa fa-share"></i>Share</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="single-item overlay-hover">
+                            <div class="single-item-image overlay-effect">
+                                <a href="#"><img src="{% static 'img/campaign/2.jpg' %}" alt=""></a>
+                            </div>
+                            <div class="single-item-text">
+                                <div class="donate-item-info">
+                                    <h4><a href="#">Gone to ghana in africa</a></h4>
+                                    <div class="post-info">
+                                        <span><i class="fa fa-user"></i> Author</span>
+                                        <span><i class="fa fa-commenting-o"></i>0 Comment</span>
+                                    </div>
+                                    <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit</p>
+                                    <span class="post-address"><i class="fa fa-map-marker"></i>792 South Park Avenue,Door 6 Wonderland, Austrila</span>
+                                </div>
+                                <div class="donate-bar-item">
+                                    <span class="text-top">Raised <span class="floatright">Supporters</span></span>
+                                    <div class="progress-wrap">
+                                        <div class="progress style">
+                                            <div class="progress-bar style wow fadeInLeft" data-progress="65%" style="width: 65%;" data-wow-duration="1.5s" data-wow-delay="1.2s">
+                                                <span class="text-top">61.39%</span>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                    <span>Goal <span class="floatright">$695.00</span></span>
+                                    <button title="Learn more" class="button-default" type="button">Donate Now!</button>
+                                    <div class="post-share-view">
+                                        <span><i class="fa fa-clock-o"></i>298 Days</span>
+                                        <span><i class="fa fa-eye"></i>160 Views</span>
+                                        <span><i class="fa fa-share"></i>Share</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-item overlay-hover">
+                            <div class="single-item-image overlay-effect">
+                                <a href="#"><img src="{% static 'img/campaign/5.jpg' %}" alt=""></a>
+                            </div>
+                            <div class="single-item-text">
+                                <div class="donate-item-info">
+                                    <h4><a href="#">Gone to ghana in africa</a></h4>
+                                    <div class="post-info">
+                                        <span><i class="fa fa-user"></i> Author</span>
+                                        <span><i class="fa fa-commenting-o"></i>0 Comment</span>
+                                    </div>
+                                    <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit</p>
+                                    <span class="post-address"><i class="fa fa-map-marker"></i>792 South Park Avenue,Door 6 Wonderland, Austrila</span>
+                                </div>
+                                <div class="donate-bar-item">
+                                    <span class="text-top">Raised <span class="floatright">Supporters</span></span>
+                                    <div class="progress-wrap">
+                                        <div class="progress style">
+                                            <div class="progress-bar style wow fadeInLeft" data-progress="65%" style="width: 65%;" data-wow-duration="1.5s" data-wow-delay="1.2s">
+                                                <span class="text-top">61.39%</span>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                    <span>Goal <span class="floatright">$695.00</span></span>
+                                    <button title="Learn more" class="button-default" type="button">Donate Now!</button>
+                                    <div class="post-share-view">
+                                        <span><i class="fa fa-clock-o"></i>298 Days</span>
+                                        <span><i class="fa fa-eye"></i>160 Views</span>
+                                        <span><i class="fa fa-share"></i>Share</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="single-item overlay-hover">
+                            <div class="single-item-image overlay-effect">
+                                <a href="#"><img src="{% static 'img/campaign/3.jpg' %}" alt=""></a>
+                            </div>
+                            <div class="single-item-text">
+                                <div class="donate-item-info">
+                                    <h4><a href="#">Gone to ghana in africa</a></h4>
+                                    <div class="post-info">
+                                        <span><i class="fa fa-user"></i> Author</span>
+                                        <span><i class="fa fa-commenting-o"></i>0 Comment</span>
+                                    </div>
+                                    <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit</p>
+                                    <span class="post-address"><i class="fa fa-map-marker"></i>792 South Park Avenue,Door 6 Wonderland, Austrila</span>
+                                </div>
+                                <div class="donate-bar-item">
+                                    <span class="text-top">Raised <span class="floatright">Supporters</span></span>
+                                    <div class="progress-wrap">
+                                        <div class="progress style">
+                                            <div class="progress-bar style wow fadeInLeft" data-progress="65%" style="width: 65%;" data-wow-duration="1.5s" data-wow-delay="1.2s">
+                                                <span class="text-top">61.39%</span>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                    <span>Goal <span class="floatright">$695.00</span></span>
+                                    <button title="Learn more" class="button-default" type="button">Donate Now!</button>
+                                    <div class="post-share-view">
+                                        <span><i class="fa fa-clock-o"></i>298 Days</span>
+                                        <span><i class="fa fa-eye"></i>160 Views</span>
+                                        <span><i class="fa fa-share"></i>Share</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-item overlay-hover">
+                            <div class="single-item-image overlay-effect">
+                                <a href="#"><img src="{% static 'img/campaign/6.jpg' %}" alt=""></a>
+                            </div>
+                            <div class="single-item-text">
+                                <div class="donate-item-info">
+                                    <h4><a href="#">Gone to ghana in africa</a></h4>
+                                    <div class="post-info">
+                                        <span><i class="fa fa-user"></i> Author</span>
+                                        <span><i class="fa fa-commenting-o"></i>0 Comment</span>
+                                    </div>
+                                    <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit</p>
+                                    <span class="post-address"><i class="fa fa-map-marker"></i>792 South Park Avenue,Door 6 Wonderland, Austrila</span>
+                                </div>
+                                <div class="donate-bar-item">
+                                    <span class="text-top">Raised <span class="floatright">Supporters</span></span>
+                                    <div class="progress-wrap">
+                                        <div class="progress style">
+                                            <div class="progress-bar style wow fadeInLeft" data-progress="65%" style="width: 65%;" data-wow-duration="1.5s" data-wow-delay="1.2s">
+                                                <span class="text-top">61.39%</span>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                    <span>Goal <span class="floatright">$695.00</span></span>
+                                    <button title="Learn more" class="button-default" type="button">Donate Now!</button>
+                                    <div class="post-share-view">
+                                        <span><i class="fa fa-clock-o"></i>298 Days</span>
+                                        <span><i class="fa fa-eye"></i>160 Views</span>
+                                        <span><i class="fa fa-share"></i>Share</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="single-item overlay-hover">
+                            <div class="single-item-image overlay-effect">
+                                <a href="#"><img src="{% static 'img/campaign/1.jpg' %}" alt=""></a>
+                            </div>
+                            <div class="single-item-text">
+                                <div class="donate-item-info">
+                                    <h4><a href="#">Gone to ghana in africa</a></h4>
+                                    <div class="post-info">
+                                        <span><i class="fa fa-user"></i> Author</span>
+                                        <span><i class="fa fa-commenting-o"></i>0 Comment</span>
+                                    </div>
+                                    <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit</p>
+                                    <span class="post-address"><i class="fa fa-map-marker"></i>792 South Park Avenue,Door 6 Wonderland, Austrila</span>
+                                </div>
+                                <div class="donate-bar-item">
+                                    <span class="text-top">Raised <span class="floatright">Supporters</span></span>
+                                    <div class="progress-wrap">
+                                        <div class="progress style">
+                                            <div class="progress-bar style wow fadeInLeft" data-progress="65%" style="width: 65%;" data-wow-duration="1.5s" data-wow-delay="1.2s">
+                                                <span class="text-top">61.39%</span>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                    <span>Goal <span class="floatright">$695.00</span></span>
+                                    <button title="Learn more" class="button-default" type="button">Donate Now!</button>
+                                    <div class="post-share-view">
+                                        <span><i class="fa fa-clock-o"></i>298 Days</span>
+                                        <span><i class="fa fa-eye"></i>160 Views</span>
+                                        <span><i class="fa fa-share"></i>Share</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-item overlay-hover">
+                            <div class="single-item-image overlay-effect">
+                                <a href="#"><img src="{% static 'img/campaign/4.jpg' %}" alt=""></a>
+                            </div>
+                            <div class="single-item-text">
+                                <div class="donate-item-info">
+                                    <h4><a href="#">Gone to ghana in africa</a></h4>
+                                    <div class="post-info">
+                                        <span><i class="fa fa-user"></i> Author</span>
+                                        <span><i class="fa fa-commenting-o"></i>0 Comment</span>
+                                    </div>
+                                    <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit</p>
+                                    <span class="post-address"><i class="fa fa-map-marker"></i>792 South Park Avenue,Door 6 Wonderland, Austrila</span>
+                                </div>
+                                <div class="donate-bar-item">
+                                    <span class="text-top">Raised <span class="floatright">Supporters</span></span>
+                                    <div class="progress-wrap">
+                                        <div class="progress style">
+                                            <div class="progress-bar style wow fadeInLeft" data-progress="65%" style="width: 65%;" data-wow-duration="1.5s" data-wow-delay="1.2s">
+                                                <span class="text-top">61.39%</span>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                    <span>Goal <span class="floatright">$695.00</span></span>
+                                    <button title="Learn more" class="button-default" type="button">Donate Now!</button>
+                                    <div class="post-share-view">
+                                        <span><i class="fa fa-clock-o"></i>298 Days</span>
+                                        <span><i class="fa fa-eye"></i>160 Views</span>
+                                        <span><i class="fa fa-share"></i>Share</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+    <!--End of Campaigns Area-->
+    <!--About Area Three Start-->
+    <div class="about-area-three section-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-5 col-sm-4">
+                    <img src="{% static 'img/banner/3.jpg' %}" alt="">
+                </div>
+                <div class="col-lg-8 col-md-7 col-sm-8">
+                    <div class="section-title text-center">
+                        <h2><span>About </span>Chalilac</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
+                        <a class="button-default" title="Learn more" href="#">Join with us</a>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End of About Area Three-->
+    <!--Donate Area Start-->
+    <div class="donate-area section-olive section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-4">
+                    <div class="donate-container">
+                        <div class="donate-text-wrapper">
+                            <h4><i class="fa fa-codepen"></i>Thanks you!</h4>
+                            <p>You’ve helped us raise a staggering</p>
+                            <h3><span>$695.00</span> so far!</h3>
+                        </div>
+                        <div class="donate-text-button">
+                            <a href="#">Donate/pay in your money</a>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End of Donate Area-->
+    <!--Volunteers Area Start-->
+    <div class="volunteers-area section-gray home-three">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title text-center">
+                        <h2><span>meet our </span>volunteers</h2>
+                        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy<br>
+                        with my whole heart. I am alone, and feel the charm of existence in this spot, which was created</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-4">
+                    <div class="single-volunteer-item overlay-hover">
+                        <div class="volunter-image overlay-effect">
+                            <a href="#"><img src="img/volunteer/1.jpg" alt=""></a>
+                            <div class="follow-links">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="volunteer-text">
+                            <div class="volunteer-title">
+                                <h3>John smith</h3>
+                                <span>CEO</span>
+                            </div>
+                            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                    <div class="single-volunteer-item overlay-hover">
+                        <div class="volunter-image overlay-effect">
+                            <a href="#"><img src="img/volunteer/2.jpg" alt=""></a>
+                            <div class="follow-links">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="volunteer-text">
+                            <div class="volunteer-title">
+                                <h3>Cristina rose</h3>
+                                <span>Manager</span>
+                            </div>
+                            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                    <div class="single-volunteer-item overlay-hover">
+                        <div class="volunter-image overlay-effect">
+                            <a href="#"><img src="img/volunteer/3.jpg" alt=""></a>
+                            <div class="follow-links">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="volunteer-text">
+                            <div class="volunteer-title">
+                                <h3>Jack Winson</h3>
+                                <span>Designer</span>
+                            </div>
+                            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 hidden-sm">
+                    <div class="single-volunteer-item overlay-hover">
+                        <div class="volunter-image overlay-effect">
+                            <a href="#"><img src="{% static 'img/volunteer/4.jpg' %}" alt=""></a>
+                            <div class="follow-links">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="volunteer-text">
+                            <div class="volunteer-title">
+                                <h3>John doe</h3>
+                                <span>CEO</span>
+                            </div>
+                            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End of Volunteers Area-->
+    <!--Blog Area Start-->
+    <div class="blog-area section-padding blog-three">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title large text-center">
+                        <h2><span>Latest From </span>our Blog</h2>
+                        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy<br>
+                        with my whole heart. I am alone, and feel the charm of existence in this spot, which was created</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="single-item-carousel">
+                    <div class="col-md-4">
+                        <div class="single-item overlay-hover">
+                            <div class="single-item-image">
+                                <a href="#"><img src="{% static 'img/blog/1.jpg' %}" alt=""></a>
+                            </div>
+                            <div class="single-item-text">
+                                <div class="donate-item-info">
+                                    <h4><a href="#">Gone to ghana in africa</a></h4>
+                                    <div class="post-info">
+                                        <span><i class="fa fa-calendar"></i>Feb 4, 2015</span>
+                                        <span><i class="fa fa-user"></i> Author</span>
+                                        <span><i class="fa fa-commenting-o"></i>0 Comment</span>
+                                    </div>
+                                    <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit</p>
+                                    <button title="Learn more" class="button-default" type="button">Donate Now!</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="single-item overlay-hover">
+                            <div class="single-item-image">
+                                <a href="#"><img src="{% static 'img/blog/4.jpg' %}" alt=""></a>
+                            </div>
+                            <div class="single-item-text">
+                                <div class="donate-item-info">
+                                    <h4><a href="#">Gone to ghana in africa</a></h4>
+                                    <div class="post-info">
+                                        <span><i class="fa fa-calendar"></i>Feb 4, 2015</span>
+                                        <span><i class="fa fa-user"></i> Author</span>
+                                        <span><i class="fa fa-commenting-o"></i>0 Comment</span>
+                                    </div>
+                                    <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit</p>
+                                    <button title="Learn more" class="button-default" type="button">Donate Now!</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="single-item overlay-hover">
+                            <div class="single-item-image">
+                                <a href="#"><img src="{% static 'img/blog/3.jpg' %}" alt=""></a>
+                            </div>
+                            <div class="single-item-text">
+                                <div class="donate-item-info">
+                                    <h4><a href="#">Gone to ghana in africa</a></h4>
+                                    <div class="post-info">
+                                        <span><i class="fa fa-calendar"></i>Feb 4, 2015</span>
+                                        <span><i class="fa fa-user"></i> Author</span>
+                                        <span><i class="fa fa-commenting-o"></i>0 Comment</span>
+                                    </div>
+                                    <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit</p>
+                                    <button title="Learn more" class="button-default" type="button">Donate Now!</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="single-item overlay-hover">
+                            <div class="single-item-image">
+                                <a href="#"><img src="{% static 'img/blog/1.jpg' %}" alt=""></a>
+                            </div>
+                            <div class="single-item-text">
+                                <div class="donate-item-info">
+                                    <h4><a href="#">Gone to ghana in africa</a></h4>
+                                    <div class="post-info">
+                                        <span><i class="fa fa-calendar"></i>Feb 4, 2015</span>
+                                        <span><i class="fa fa-user"></i> Author</span>
+                                        <span><i class="fa fa-commenting-o"></i>0 Comment</span>
+                                    </div>
+                                    <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit</p>
+                                    <button title="Learn more" class="button-default" type="button">Donate Now!</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End of Blog Area-->
+    <!--Testimonial Area Start-->
+    <div class="testimonial-area section-padding section-gray home-three">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="testimonial-carousel carousel-style-one">
+                        <div class="single-testimonial">
+                            <div class="testimonial-img">
+                                <img src="{% static 'img/testimonial/1.jpg' %}" alt="" />
+                            </div>
+                            <div class="testimonial-text">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis</p>
+                            </div>
+                            <div class="testimonial-info">
+                                <span class="testimonial-name">Jack winson</span>
+                                <span class="testimonial-title">Designer</span>
+                            </div>
+                        </div>
+                        <div class="single-testimonial">
+                            <div class="testimonial-img">
+                                <img src="{% static 'img/testimonial/1.jpg' %}" alt="" />
+                            </div>
+                            <div class="testimonial-text">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis</p>
+                            </div>
+                            <div class="testimonial-info">
+                                <span class="testimonial-name">Jack winson</span>
+                                <span class="testimonial-title">Designer</span>
+                            </div>
+                        </div>
+                    </div> 
+                </div>  
+            </div>
+        </div>
+    </div>
+    <!--End of Testimonial Area-->
+    <!--Client Area Start-->
+    <div class="client-area section-padding section-purple">
+        <div class="container">
+            <div class="row">
+                <div class="brand-carousel">
+                    <div class="col-md-3">
+                        <div class="single-client-item">
+                            <a href="#"><img src="{% static 'img/client/1.png' %}" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="single-client-item">
+                            <a href="#"><img src="{% static 'img/client/2.png' %}" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="single-client-item">
+                            <a href="#"><img src="{% static 'img/client/3.png' %}" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="single-client-item">
+                            <a href="#"><img src="{% static 'img/client/4.png' %}" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="single-client-item">
+                            <a href="#"><img src="{% static 'img/client/1.png' %}" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   {% include 'footer.html' %}
+</div> 
+
+{% endblock %}

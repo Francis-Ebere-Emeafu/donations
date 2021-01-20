@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+
+{% block bodycontent %}
+
+<!--Banner Area Start-->
+<!--<div class="banner-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="banner-text text-center">
+                    <h3>Our Vision</h3>
+                </div>
+            </div>
+        </div>    
+    </div>
+</div>-->
+<!--End of Banner Area-->
+<div class="blog-area section-padding-bottom blog-details">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-container">
+                                    <h1>Committees</h1>
+                                    <sub>Getting things done</sub>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="single-item">
+                                    <div class="single-item-text">
+                                        <div class="donate-item-info">
+                                            <h5>
+                                                The Atheist Society of Nigeria gets work done through committees (and sub-committees). This way we can get interested people to focus on narrow objectives at a time.
+                                            </h5>
+                                            <hr>
+                                           
+                                            <p>
+                                                
+                                            </p>
+
+                                             <h3>Available Committees</h3>
+                                            <hr>
+                                             <div class="list-group">
+                                                {% for item in items %}
+                                                    <a href="#" class="list-group-item">
+                                                        <h4 class="list-group-item-heading">{{item.title}}</h4>
+                                                        <p class="list-group-item-text">{{item.brief}}</p>
+                                                        <p class="list-group-item-text">{{item.members}} members</p>
+                                                    </a>
+                                                {% endfor %}
+                                          
+                                            </div>
+                                                    <small class="label label-info">Please send an email to info@atheist.org.ng to tell us a committee you want to join or start!</small>
+
+                                        </div> 
+                                    </div>
+                                </div>
+                                
+                               
+                            </div>
+                            <div class="col-md-4">
+                               
+                                <div class="single-sidebar-widget">
+                                    <div class="sidebar-widget-title">
+                                        <h4>Summary</h4>
+                                        <div class="recent-posts">
+                                            <div class="recent-post-item">
+                                                <h6><a href="#">Check the meetups table for one coming soon near you.</a></h6>
+                                            </div>
+                                            <div class="recent-post-item">
+                                                <h6><a href="#">Send us a mail on info@atheist.org.ng to tell us about your meetup.</a></h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-sidebar-widget">
+                                    <div class="image-information">
+                                        <p>Giving back to the local community and the wider world is essential to our core beliefs</p>
+                                        <a href="{% url 'contact' %}">contact us now</a>
+                                    </div>
+                                </div>
+                             
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+{% endblock bodycontent %}

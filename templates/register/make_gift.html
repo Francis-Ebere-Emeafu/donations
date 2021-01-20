@@ -1,0 +1,362 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+<style type="text/css">
+  #rcorners2 {
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    padding: 20px; 
+    width: 200px;
+    height: 150px;    
+}
+</style>
+
+{% block bodycontent %}
+<div class=" section-olive " >
+<!-- section-padding -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="select-amount-container">
+                    <div class="amount-title text-center">
+                        <h2 style="color: white; padding-bottom: 10px;">Make a Donation</h2>
+                    </div>
+                    <div class="amount-content">
+                        <div class="single-amount-box">
+                            <div class="single-amount">
+                                <i class="fa fa-check-square-o"></i>
+                                <span>&#x20A6; 2,000.00</span>
+                            </div>
+                        </div>
+
+                        <div class="single-amount-box select-amount">
+                            <div class="single-amount" style="color: #2E7E4F;">
+                                <i class="fa fa-check-square-o" style="color: #2E7E4F;"></i>
+                                <span>&#x20A6; 5,000.00</span>
+                            </div>
+                        </div>
+                        <div class="single-amount-box">
+                            <div class="single-amount">
+                                <i class="fa fa-check-square-o"></i>
+                                <span>&#x20A6; 10,000.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="input-amount-container">
+                    <div class="amount-title text-center">
+                        <h2 style="color: white; padding-bottom: 10px;">Cause a Change</h2>
+                    </div>
+                    <div class="single-amount-box">
+                        <div class="single-amount" style="padding: 0px;" >
+                        	<img src="{% static 'img/help/light1.jpg' %}" class="img-responsive">
+                            <!-- i class="fa fa-check-square-o"></i>
+                            <span>&#x20A6; 2,000.00</span> -->
+                        </div>
+                    </div>
+
+                    <div class="single-amount-box">
+                        <div class="single-amount" style="padding: 0px;">
+                        	<img src="{% static 'img/help/hand1.jpg' %}" class="img-responsive">
+                            <!-- i class="fa fa-check-square-o"></i>
+                            <span>&#x20A6; 2,000.00</span> -->
+                        </div>
+                    </div>
+
+                    <div class="single-amount-box">
+                        <div class="single-amount" style="padding: 0px;">
+                        	<img src="{% static 'img/help/present1.jpg' %}" class="img-responsive">
+                            <!-- i class="fa fa-check-square-o"></i>
+                            <span>&#x20A6; 2,000.00</span> -->
+                        </div>
+                    </div>
+
+                    <!-- <input type="text" placeholder="Enter your amount here!" name="amount"> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--Donate Page Area Start-->
+                <div class="contact-form-area section-gray"  style="padding-top: 100px;">
+
+
+                  <form action="#" method="post">{% csrf_token %}
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="section-title text-center">
+                                    <h2><span>Make A </span> Donation</h2>
+                                </div>
+                							      {% if form.non_field_errors %}
+                							        {% for error in form.non_field_errors %}
+                							            <div class="alert alert-danger">
+                							                {{ error }}
+                							            </div>
+                							        {% endfor %}
+                							      {% endif %}
+
+                                    <div class="row">
+                                      <div class="col-md-4">
+                                        <div class="panel panel-info">
+                                          <div class="panel-heading">Donation Amount</div>
+                                          <div class="panel-body">
+                                              {% comment %}
+                                              <div class="form-group has-feedback">
+                                                {% if form.currency.errors %}
+                                                <div class="alert alert-danger">
+                                                    {{form.currency.errors}}
+                                                </div>
+                                                {% endif %}
+                                                <label for="id_currency">Currency</label>
+                                                {{form.currency}}
+                                              </div>
+                                              {% endcomment %}
+                                              <div class="form-group has-feedback">
+                                                {% if form.amount.errors %}
+                                                <div class="alert alert-danger">
+                                                    {{form.amount.errors}}
+                                                </div>
+                                                {% endif %}
+                                                <label for="id_amount">Amount (NGN)</label>
+                                                {{form.amount}}
+                                              </div>
+                                          </div>
+                                            
+                                        </div>
+                                         <div class="panel panel-info">
+                                          <div class="panel-heading">Mode of Payment</div>
+                                          <div class="panel-body">
+                                                {% if form.payment_type.errors %}
+                                                <div class="alert alert-danger">
+                                                    {{form.payment_type.errors}}
+                                                </div>
+                                                {% endif %}
+                                                {% for paytype in form.payment_type %}
+                                                <div class="radio">
+                                                    {{paytype}}
+                                                </div>
+                                                {% endfor %}
+                                          <div class="" style="border-radius: 25px;
+                                          border: 0.5px solid #73AD21; padding: 20px; ">
+                                            <h5 style="color: green;">For Local Payments</h5>
+                                            <br>
+                                            <table>
+                                            <tr>
+                                              <th style="color: black;"><h5>BANK:</h5></th>
+                                              <td>ACCESS BANK</td>
+                                            </tr>
+                                            
+                                            <tr>
+                                              <th style="color: black;"><h5>AC. NAME:</h5></th>
+                                              <td>Atheist society of Nigeria</td>
+                                            </tr>
+
+                                            <tr>
+                                              <th style="color: black;"><h5>AC. NUMBER:&nbsp; &nbsp; </h5></th>
+                                              <td>0739048315</td>
+                                            </tr>
+                                            </table>
+                                             <br>
+
+                                            <h5 style="color: green;">For International Payments/Wire Transfer</h5>
+                                            <br>
+                                            <p style="color: black;"><h5>CITYBANK NEW YORK {USA Dolalr Account}</h5>
+                                            
+                                            111 Wall Street, New York<br>
+                                            
+                                            N.Y. 10043</p>
+                                            <table>
+                                            <tr>
+                                              <th style="color: black;"><h5>SWIFT CODE:</h5></th>
+                                              <td>CITIUS33</td>
+                                            </tr>
+                                            
+                                            <tr>
+                                              <th style="color: black;"><h5>SORT CODE:</h5></th>
+                                              <td>021–000–089</td>
+                                            </tr>
+                                            
+                                            <tr>
+                                              <th style="color: black;"><h5>FOR CREDIT TO: &nbsp; &nbsp; </h5></th>
+                                              <td>ACCESS BANK PLC</td>
+                                            </tr>
+
+                                            <tr>
+                                              <th style="color: black;"><h5>ACCOUNT NO:</h5></th>
+                                              <td>36145842</td>
+                                            </tr>
+                                            </table>
+                                            <!-- <br> -->
+                                            <p style="color: black;"><h5>FOR FINAL CREDIT TO:</h5></p>
+                                            <table>
+                                           <!-- <tr>
+                                              <th style="color: black;"><h5>BANK:</h5></th>
+                                              <td>ACCESS BANK</td>
+                                            </tr> -->
+                                            <tr>
+                                              <th style="color: black;"><h5>AC. NAME:</h5></th>
+                                              <td>ATHEIST SOCIETY OF NIGERIA</td>
+                                            </tr>
+                                            <tr>
+                                              <th style="color: black;"><h5>AC. NUMBER:&nbsp; &nbsp; </h5></th>
+                                              <td>0739210228</td>
+                                            </tr>
+                                          </table>
+                                          
+                                          </div>  
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col-md-8">
+                                        <div class="panel panel-info">
+                                          <div class="panel-heading">Your information</div>
+                                          <div class="panel-body">
+                                            <div class="col-md-6">
+                                                <div class="form-group has-feedback">
+                                                    {% if form.first_name.errors %}
+                                                        <div class="alert alert-danger">
+                                                            {{ form.first_name.errors }}
+                                                        </div>
+                                                        {% endif %}
+                                                        {{ form.first_name }}
+                                                        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                                                    </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group has-feedback">
+                                                    {% if form.last_name.errors %}
+                      										            <div class="alert alert-danger">
+                      										                {{ form.last_name.errors }}
+                      										            </div>
+    										                            {% endif %}
+    										                            {{ form.last_name }}
+                        										        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                        										    </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group has-feedback">
+                                                    {% if form.email.errors %}
+                                                    <div class="alert alert-danger">
+                                                        {{ form.email.errors }}
+                                                    </div>
+                                                    {% endif %}
+                                                    {{ form.email }}
+                                                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group has-feedback">
+                                                    {% if form.phone.errors %}
+                      										            <div class="alert alert-danger">
+                      										                {{ form.phone.errors }}
+                      										            </div>
+                      										        {% endif %}
+                      										        {{ form.phone }}
+                      										        <span class="glyphicon glyphicon-earphone form-control-feedback"></span>
+                      										    </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                              <div class="form-group has-feedback">
+                                                  {% if form.address.errors %}
+                                                      <div class="alert alert-danger">
+                                                          {{ form.address.errors }}
+                                                      </div>
+                                                  {% endif %}
+                                                  {{ form.address }}
+                                                  <span class="glyphicon glyphicon-home form-control-feedback"></span>
+                                              </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group has-feedback">
+                                                    {% if form.country.errors %}
+                                                      <div class="alert alert-danger">
+                                                          {{ form.country.errors }}
+                                                      </div>
+                                                  {% endif %}
+                                                  {{ form.country }}
+                                                  <span class="glyphicon glyphicon-globe form-control-feedback"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group has-feedback">
+                                                    {% if form.bio.errors %}
+                                                      <div class="alert alert-danger">
+                                                          {{ form.bio.errors }}
+                                                      </div>
+                                                  {% endif %}
+                                                  {{ form.bio }}
+                                              </div>
+                                            </div>
+                                            <div class="col-md-6 col-md-offset-3 text-center">
+                                                <button type="submit"  class="btn btn-block btn-success ">Donate!</button>
+                                            </div>
+
+                                          </div>
+                                        </div>
+                                      </div>
+
+
+
+                                        </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </form>
+                </div>
+                <!--End of Donate Page Area-->
+
+
+{% endblock bodycontent %}
+
+{% block extra-js %}
+<script>
+  $(function () {
+
+
+    $('#id_first_name').attr('placeholder', 'First Name');
+    $('#id_first_name').addClass('form-control');
+
+    $('#id_last_name').attr('placeholder', 'Last Name');
+    $('#id_last_name').addClass('form-control');
+
+    $('#id_bio').attr('placeholder', 'Tell us a bit about yourself');
+    $('#id_bio').addClass('form-control');
+
+    $('#id_email').attr('placeholder', 'Email');
+    $('#id_email').addClass('form-control');
+
+    $('#id_pwd1').addClass('form-control');
+    $('#id_pwd1').attr('placeholder', 'Password');
+    $('#id_pwd2').addClass('form-control');
+    $('#id_pwd2').attr('placeholder', 'Verify Password');
+
+    $('#id_phone').attr('placeholder', 'Mobile');
+    $('#id_phone').addClass('form-control');
+
+    $('#id_address').attr('placeholder', 'Contact Address');
+    $('#id_address').addClass('form-control');
+
+    $('#id_country').attr('placeholder', 'Country');
+    $('#id_country').addClass('form-control');
+
+    $('#id_city').attr('placeholder', 'City');
+    $('#id_city').addClass('form-control');
+    
+    $('#id_currency').addClass('form-control');
+    $('#id_amount').addClass('form-control');
+    $('#id_payment_type').addClass('form-control');
+
+    // $('#id_referrer').attr('placeholder', 'Referrer');
+    // $('#id_referrer').addClass('form-control');
+
+    $('input').iCheck({
+      checkboxClass: 'icheckbox_square-blue',
+      radioClass: 'iradio_square-blue',
+      increaseArea: '20%' // optional
+    });
+  });
+</script>
+
+{% endblock extra-js %}

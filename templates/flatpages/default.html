@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block bodycontent %}
+
+<div class="blog-area section-padding-bottom blog-details">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-container">
+                                    <h1>{{flatpage.title}}</h1>
+                                     <sub>{% block subtitle %}{% endblock subtitle %}</sub>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="single-item">
+                                    <div class="single-item-text">
+                                        {{flatpage.content}}
+                                       
+                                    </div>
+                                </div>
+                                
+                               
+                            </div>
+                            <div class="col-md-4">
+                               
+                                <div class="single-sidebar-widget">
+                                    <div class="sidebar-widget-title">
+                                        <h4>Summary</h4>
+                                        <div class="recent-posts">
+                                            <div class="recent-post-item">
+                                                <h6><a href="#">{% block summary1 %} Check the meetups table for one coming soon near you. {% endblock summary1 %}</a></h6>
+                                            </div>
+                                            <div class="recent-post-item">
+                                                <h6><a href="#">{% block summary2 %} Send us a mail on info@atheist.org.ng to tell us about your meetup. {% endblock summary2 %}</a></h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-sidebar-widget">
+                                    <div class="image-information">
+                                        <p>Giving back to the local community and the wider world is essential to our core beliefs</p>
+                                        <a href="{% url 'contact' %}">contact us now</a>
+                                    </div>
+                                </div>
+                             
+                            </div>
+                        </div>
+                    </div>
+                </div>
+{% endblock bodycontent %}

@@ -1,0 +1,202 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+
+{% block head_title %}Programe of Events{% endblock head_title %}
+
+
+{% block bodycontent %}
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+}
+
+th {
+    font-weight: bold;
+}
+</style>
+
+<!--Banner Area Start-->
+
+<!-- 
+<div class="banner-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="banner-text text-left">
+                    <h3>Programe of Events, 2017 National Convention!</h3>
+                </div>
+            </div>
+        </div>    
+    </div>
+</div>
+background: url("{% static 'img/icon/banner-icon.png' %}") no-repeat scroll 0 0; -->
+
+<div class="featured-area featured-area-three home-three" style="padding: 0px">
+<div class="background-area">       
+    <img src="{% static 'img/road2.jpg' %}" alt=""/>
+    <div class="banner-content slider-1 static-text">
+         
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="text-content-wrapper">
+                        <div class="text-content text-center">
+                            <h1 class="title1 border-none">
+                            Programe of Events, 2018 Convention Coming soon
+                             <br>
+                            <!-- <small>Road to Reason</small> -->
+                            </h1>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+         
+    </div>
+</div>
+</div>
+<!--End of Banner Area-->
+
+<div class="blog-area section-padding-bottom blog-details">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-container">
+                    <h4 style="text-align: center; line-height: 1.5;">
+                        Programme of event of the Atheist National Convention<br/>
+                        holding at Unilag Guest House, <br/> University of Lagos
+                    </h4>
+                    <!-- <h1>Event Calendar</h1>
+                    <sub>What we have planned</sub> -->
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!--
+            <div class="col-md-9">
+                <div class="single-item">
+                    <div class="single-item-text">
+                        <div class="donate-item-info">
+                            <div class="contact-form-area " style="padding-top: 1px;">
+
+                                 <table style="width:100%">
+                                  <tr>
+                                    <th>Day</th>
+                                    <th>Time</th>
+                                    <th>Activity</th>
+                                    <th>Responsibility</th>
+                                  </tr>
+                                  <tr>
+                                    <td>November 10th 2017</td>
+                                    <td>All day</td>
+                                    <td>Arrival of Up country participants</td>
+                                    <td> - - - </td>
+                                  </tr>
+                                  <tr>
+                                    <td>November 11st 2017</td>
+                                    <td>08:00 - 09:55</td>
+                                    <td>Arrival and accreditation of delegates and participants</td>
+                                    <td>Teams to be nominated as we flesh out this pregame</td>
+                                  </tr>
+                                  <tr>
+                                    <td> '' </td>
+                                    <td>10:00 - 10:15</td>
+                                    <td>Openning</td>
+                                    <td>Master of ceremony</td>
+                                  </tr>
+                                  <tr>
+                                    <td> '' </td>
+                                    <td>10:16 - 10:45</td>
+                                    <td>Introduction</td>
+                                    <td>All present</td>
+                                  </tr>
+                                  <tr>
+                                    <td> '' </td>
+                                    <td>10:46 - 11:15</td>
+                                    <td>Welcome address Calistus Igwilo <br> President ASN</td>
+                                    <td>- Brief synopsis of the society <br>
+                                        - Objectives of the society <br>
+                                        - Programs. How does the society intend to achieve its objectives? <br>
+                                        - Stakeholders roles and responsibilities
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td> '' </td>
+                                    <td>11:16 - 11:45</td>
+                                    <td>Tea break/small-chops/
+                                    networking</td>
+                                    <td>All present</td>
+                                  </tr>
+                                  <tr>
+                                    <td> '' </td>
+                                    <td>11:46 - 12:30</td>
+                                    <td>The Road to Reason <br>
+                                        Bill Flavel<br>
+                                        V.P. Atheist Alliance International</td>
+                                    <td>Analytical review of emperical evidence as a tool for reasoning</td>
+                                  </tr>
+                                  <tr>
+                                    <td> '' </td>
+                                    <td>12:31 - 12:45</td>
+                                    <td>Interactive session arising from the theme: <br>
+                                        The Road to Reason</td>
+                                    <td>Delegates are expected to take part in the discussion. <br>
+                                        Question and Answer session</td>
+                                  </tr>
+                                  <tr>
+                                    <td> '' </td>
+                                    <td>12:46 - 13:25</td>
+                                    <td>The challenge of Atheism in Nigeria - Leo Igwe<br>
+                                        President Nigeria Humanist Movement</td>
+                                    <td>Leo Igwe is an author and a prominent Atheist in Nigeria.<br>
+                                        Provides appropriate narrative with case studies highlighting the challenges of Atheism in Nigeria and Africa as a whole </td>
+                                  </tr>
+                                  <tr>
+                                    <td> '' </td>
+                                    <td>13:26 - 14:10</td>
+                                    <td>Working Interactive Session</td>
+                                    <td>Participants will be grouped to brainstorm and return with ideas on how the challenges identified above could be mitigated.<br>
+                                        Each group will present its ideas in turns. The idea is to make everyone have a feel of the event</td>
+                                  </tr>
+                                  <tr>
+                                    <td> '' </td>
+                                    <td>14:11 - 15:00</td>
+                                    <td>Launch/Break/Networking</td>
+                                    <td>All</td>
+                                  </tr>
+                                  <tr>
+                                    <td> '' </td>
+                                    <td>15:01 - 15:45</td>
+                                    <td>The Great Debate- Topic? <br>
+                                        - Eg. Reason VS Faith <br>
+                                        An alternative to a debate is a one-hour video on evolution.<br>
+                                        (some are just atheist without having a basis to anchor their position</td>
+                                    <td>Participants should go home with a better understanding of what Atheism is all about</td>
+                                  </tr>
+                                  <tr>
+                                    <td> '' </td>
+                                    <td>16:00 - - -</td>
+                                    <td>Closing</td>
+                                    <td> - </td>
+                                  </tr>
+                                </table> 
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="col-md-3">
+            {% include 'convention/side.html' %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock bodycontent %}                                            

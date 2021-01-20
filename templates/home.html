@@ -1,0 +1,221 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block head_title %}Home{% endblock head_title %}
+
+{% block extra-css %}
+<style>
+
+    img.border {
+        border: 1px solid #00ff00;
+    }
+</style>
+{% endblock extra-css %}
+
+{% block bodycontent %}
+<!--Slider Area Start-->
+<div class="slider-container-wrapper content-top">
+    {% block slider %}
+   
+    <div class="slider-area">
+        <div class="preview-2">
+            <div id="nivoslider" class="slides">  
+                <a href="{% url 'convention' %}">
+                    <img src="{% static 'img/slider/12.jpg' %}" alt="title='#slider-1-caption1'"/> <!---->
+                </a>  
+                <img src="{% static 'img/slider/10.jpg' %}" alt="#slider-1-caption1" />
+                <img src="{% static 'img/slider/11.jpg' %}" alt="" title="##slider-1-caption1"/>
+            </div>  
+            <div id="slider-1-caption1" class="nivo-html-caption nivo-caption">
+                <div class="banner-content slider-1">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="text-content-wrapper">
+                                    <div class="text-content slide-2 text-center">
+                                        <h1 class="title1">Freedom from religious indoctrination</h1>
+                                        {% comment %}<p class="sub-title hidden-xs"> Typi non habent claritatem insitam; est usus legentis in iis qui facit <br>
+                                        eorum claritatem. Investigationes </p>{% endcomment %}
+                                        <div class="banner-readmore">
+                                            <a class="button-default button-border dark-hover" title="Learn more" href="#">Learn More</a>   
+                                            <a class="button-default button-dark" title="Learn more" href="{% url 'register' %}">Join us</a>   
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </div> 
+    {% endblock slider %}
+    <!--End of Slider Area-->
+    <!--Help Area Start-->
+    {% block help-area %}
+    
+    <div class="help-area help-area-three">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-4">
+                    <div class="single-help-item">
+                        <a href="#"><img src="{% static 'img/help/12.jpg' %}" alt=""></a>
+                        <div class="help-title">
+
+                            <h4><a href="{% url 'volunteer' %}">Become a Volunteer</a></h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <div class="single-help-item">
+                        <a href="#"><img src="{% static 'img/help/10.jpg' %}" alt=""></a>
+                        <div class="help-title">
+                            <h4><a href="{% url 'make_gift' %}">Make a gift</a></h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <div class="single-help-item">
+                        <a href="#"><img src="{% static 'img/help/11.jpg' %}" alt=""></a>
+                        <div class="help-title">
+                            <h4><a href="{% url 'register' %}">Register</a></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock help-area %}
+    <!--End of Help Area-->
+</div>
+<!--End of Slider Container Wrapper-->
+
+<!--About Area Three Start-->
+                {% block about-area %}
+               
+                <div class="about-area-three section-gray">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-5 col-sm-4">
+                                <!--<a href="{% url 'convention' %}">
+                                    <img src="{% static 'img/convention.jpeg' %}" alt="">
+                                </a>-->
+                            </div>
+                            <div class="col-lg-8 col-md-7 col-sm-8">
+                                <div class="section-title text-center">
+                                    <h2><span> </span>Welcome</h2>
+                                    <p>
+                                        Welcome to Atheist Society of Nigeria website, We are registered with the corporate affairs commission and have a mandate to promote a secular Nigeria where public policy, education and scientific enquiry will be founded on sound reason, rationality and evidence, and not influenced by religious beliefs.  We provide a sense of community to all nonreligious and non-theistic Nigerians and work with state and non-state institutions to promote and protect the rights and interests of atheists, freethinkers and nonbelievers in the country.
+                                    </p>
+                                    <a class="button-default" title="Learn more" href="{% url 'register' %}">Join us!</a>	
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                {% endblock about-area %}
+                <!--End of About Area Three-->
+                <!--Donate Area Start-->
+                {% block reachout %}
+                <div class="donate-area section-olive section-padding">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-4">
+                                <div class="donate-container">
+                                    <div class="donate-text-wrapper">
+                                        <h4><i class="fa fa-phone"></i>Can't Come out?</h4>
+                                        <p>Reach out to us on twitter or facebook!</p>
+                                        <h3>Or Call<span> 08180105733</span></h3>
+                                    </div>
+                                    <div class="donate-text-button">
+                                        <a href="{% url 'contact' %}">You can reach out to us</a>
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 {% endblock reachout %}
+                <!--End of Donate Area-->
+
+                                <!--Blog Area Start-->
+                <div class="blog-area section-padding">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="section-title text-center">
+                                    <h2><span>Latest </span>News</h2>
+                                    <p>Most recent items from our blog.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="single-item-carousel">
+                                {% for post in posts %}
+                                <div class="col-md-4">
+                                    <div class="single-item overlay-hover">
+                                        <div class="single-item-image overlay-effect">
+                                            <a href="{{post.blog_page}}" target="_blank"><img src="{{post.thumbnail.url}}" alt=""></a>
+                                        </div>
+                                        <div class="single-item-text">
+                                            <div class="donate-item-info">
+                                                <h4><a href="{{post.blog_page}}" target="_blank">{{post.title}}</a></h4>
+                                                <div class="post-info">
+                                                    <span><i class="fa fa-calendar"></i>{{post.reference_date|date:"d b Y"}}</span>
+                                                    
+                                                </div>
+                                                <p>{{post.text_content|truncatewords:"20"}}</p>
+                                                <button title="Learn more" class="button-default" type="button" onclick="parent.location.href='{{post.blog_page}}'" >More News!</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End of Blog Area-->
+
+                <!--Testimonial Area Start-->
+                {% block testimonials %}
+               
+                <div class="testimonial-area section-padding section-gray home-three">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="testimonial-carousel carousel-style-one">
+                                    <div class="single-testimonial">
+                                        <div class="testimonial-img">
+                                            <img src="{% static 'img/testimonial/kenyatta.jpg' %}" alt="" />
+                                        </div>
+                                        <div class="testimonial-text">
+                                            <p>
+                                                When the missionaries arrived, the Africans had the land and the missionaries had the bible. They taught us how to pray with our eyes closed. When we opened them, they had the land and we had the bible.
+                                            </p>
+                                        </div>
+                                        <div class="testimonial-info">
+                                            <span class="testimonial-name">Jomo Kenyatta</span>
+                                            <span class="testimonial-title">(1891-1978)</span>
+                                        </div>
+                                    </div>
+                                    <div class="single-testimonial">
+                                        <div class="testimonial-img">
+                                            <img src="{% static 'img/testimonial/pascal.jpeg' %}" alt="" />
+                                        </div>
+                                        <div class="testimonial-text">
+                                            <p>Men never commit evil so fully and joyfully as when they do it for religious convictions.</p>
+                                        </div>
+                                        <div class="testimonial-info">
+                                            <span class="testimonial-name">Blaise Pascal</span>
+                                            <span class="testimonial-title">(1623-1662)</span>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>  
+                        </div>
+                    </div>
+                </div> 
+                {% endblock testimonials %}
+                <!--End of Testimonial Area-->
+{% endblock bodycontent %}

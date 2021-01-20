@@ -1,0 +1,65 @@
+WARNING 2021-01-20 02:51:30,498 log Not Found: /favicon.ico
+ERROR 2021-01-20 03:06:09,513 log Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/icode/Documents/djangoprojects/donations/env/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/icode/Documents/djangoprojects/donations/env/lib/python3.7/site-packages/django/core/handlers/base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/icode/Documents/djangoprojects/donations/env/lib/python3.7/site-packages/django/core/handlers/base.py", line 143, in _get_response
+    response = response.render()
+  File "/home/icode/Documents/djangoprojects/donations/env/lib/python3.7/site-packages/django/template/response.py", line 106, in render
+    self.content = self.rendered_content
+  File "/home/icode/Documents/djangoprojects/donations/env/lib/python3.7/site-packages/django/template/response.py", line 83, in rendered_content
+    content = template.render(context, self._request)
+  File "/home/icode/Documents/djangoprojects/donations/env/lib/python3.7/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/icode/Documents/djangoprojects/donations/env/lib/python3.7/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/icode/Documents/djangoprojects/donations/env/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/icode/Documents/djangoprojects/donations/env/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/icode/Documents/djangoprojects/donations/env/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/icode/Documents/djangoprojects/donations/env/lib/python3.7/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/icode/Documents/djangoprojects/donations/env/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/icode/Documents/djangoprojects/donations/env/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/icode/Documents/djangoprojects/donations/env/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/icode/Documents/djangoprojects/donations/env/lib/python3.7/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/icode/Documents/djangoprojects/donations/env/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/icode/Documents/djangoprojects/donations/env/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/icode/Documents/djangoprojects/donations/env/lib/python3.7/site-packages/django/template/defaulttags.py", line 166, in render
+    len_values = len(values)
+  File "/home/icode/Documents/djangoprojects/donations/env/lib/python3.7/site-packages/django/db/models/query.py", line 256, in __len__
+    self._fetch_all()
+  File "/home/icode/Documents/djangoprojects/donations/env/lib/python3.7/site-packages/django/db/models/query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/icode/Documents/djangoprojects/donations/env/lib/python3.7/site-packages/django/db/models/query.py", line 55, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/icode/Documents/djangoprojects/donations/env/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1129, in execute_sql
+    sql, params = self.as_sql()
+  File "/home/icode/Documents/djangoprojects/donations/env/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 474, in as_sql
+    extra_select, order_by, group_by = self.pre_sql_setup()
+  File "/home/icode/Documents/djangoprojects/donations/env/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 54, in pre_sql_setup
+    self.setup_query()
+  File "/home/icode/Documents/djangoprojects/donations/env/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 45, in setup_query
+    self.select, self.klass_info, self.annotation_col_map = self.get_select()
+  File "/home/icode/Documents/djangoprojects/donations/env/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 254, in get_select
+    sql, params = self.compile(col, select_format=True)
+  File "/home/icode/Documents/djangoprojects/donations/env/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 405, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "/home/icode/Documents/djangoprojects/donations/env/lib/python3.7/site-packages/django/db/models/expressions.py", line 737, in as_sql
+    return "%s.%s" % (qn(self.alias), qn(self.target.column)), []
+  File "/home/icode/Documents/djangoprojects/donations/env/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 396, in quote_name_unless_alias
+    r = self.connection.ops.quote_name(name)
+  File "/home/icode/Documents/djangoprojects/donations/env/lib/python3.7/site-packages/django/db/backends/dummy/base.py", line 20, in complain
+    raise ImproperlyConfigured("settings.DATABASES is improperly configured. "
+django.core.exceptions.ImproperlyConfigured: settings.DATABASES is improperly configured. Please supply the ENGINE value. Check settings documentation for more details.
+WARNING 2021-01-20 03:06:09,787 log Not Found: /favicon.ico

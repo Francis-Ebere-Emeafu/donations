@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+
+{% block bodycontent %}
+
+<!--Banner Area Start-->
+<!--<div class="banner-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="banner-text text-center">
+                    <h3>Our Vision</h3>
+                </div>
+            </div>
+        </div>    
+    </div>
+</div>-->
+<!--End of Banner Area-->
+<div class="blog-area section-padding-bottom blog-details">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-container">
+                                    <h1>Event Calendar</h1>
+                                    <sub>What we have planned</sub>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="single-item">
+                                    <div class="single-item-text">
+                                        <div class="donate-item-info">
+                                            <h5>
+                                                The Atheist Society of Nigeria will hold national conventions every year in states in Nigeria.
+                                                Our convention will bring together atheists, agnostics and freethinkers from around the country to celebrate
+                                                Science, Reason and Atheism.
+                                            </h5>
+                                            <p><strong>The date of our first convention will be announced shortly!</strong></p>
+                                            <hr>
+                                           
+                                            <p>
+                                                
+                                            </p>
+                                            <div class="panel panel-info">
+                                            <!-- Default panel contents -->
+                                            <div class="panel-heading">Upcoming Events</div>
+                                            <div class="panel-body">
+                                                <p>
+                                                    Here we show more formal events in the atheist, humanist or skeptical communities.
+                                                </p>
+
+                                            <!-- Table -->
+                                            {% if items %}
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <td>Location</td>
+                                                        <td>Date</td>
+                                                        <td>Theme/Topic</td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    {% for item in items %}
+                                                    <tr>
+                                                        <td>{{item.location}}</td>
+                                                        <td>{{item.meetup_date}}</td>
+                                                        <td>{{item.theme}}</td>
+                                                    </tr>
+                                                    {% endfor %}
+                                                    
+                                                </tbody>
+                                            </table>
+                                            {% else %}
+                                                <h5 class="label label-danger">No Events to show at the moment</h5>
+                                            {% endif %}
+                                            </div>
+                                            <div class="panel-footer">
+                                                    <small class="label label-info">Please send an email to info@atheist.org.ng to tell us about your event!</small>
+                                                
+                                            </div>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>
+                                
+                               
+                            </div>
+                            <div class="col-md-4">
+                               
+                                <div class="single-sidebar-widget">
+                                    <div class="sidebar-widget-title">
+                                        <h4>Summary</h4>
+                                        <div class="recent-posts">
+                                            <div class="recent-post-item">
+                                                <h6><a href="#">Check the meetups table for one coming soon near you.</a></h6>
+                                            </div>
+                                            <div class="recent-post-item">
+                                                <h6><a href="#">Send us a mail on info@atheist.org.ng to tell us about your meetup.</a></h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-sidebar-widget">
+                                    <div class="image-information">
+                                        <p>Giving back to the local community and the wider world is essential to our core beliefs</p>
+                                        <a href="{% url 'contact' %}">contact us now</a>
+                                    </div>
+                                </div>
+                             
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+{% endblock bodycontent %}

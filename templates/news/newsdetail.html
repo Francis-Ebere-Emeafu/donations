@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block extra-css %}
+<style>
+    .banner-area{
+        background:url(/static/img/background/faq.png);
+    }
+    img.border {
+        border: 1px solid #00ff00;
+    }
+</style>
+{% endblock extra-css %}
+
+{% block bodycontent %}
+
+<!--Banner Area Start-->
+<!--<div class="banner-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="banner-text text-center">
+                    <h3>About Atheism</h3>
+                </div>
+            </div>
+        </div>    
+    </div>
+</div>-->
+<!--End of Banner Area-->
+
+<!--Blog Details Area Start-->
+                <div class="blog-area section-padding-bottom blog-details">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-container">
+                                    <h1>{{item.title}}</h1>
+                                    <div class="post-info">
+                                                <span><i class="fa fa-calendar"></i>{{item.publish_date}}</span>
+                                                <span><i class="fa fa-user"></i> Author</span>
+                                                <span><i class="fa fa-commenting-o"></i>0 Comment</span>
+                                            </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="single-item">
+                                <div class="single-item-text">
+                                    <div class="donate-item-info">
+                                       
+                                        <p>{{item.content|safe}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                           
+                            <div class="single-sidebar-widget">
+                                <div class="sidebar-widget-title">
+                                    <h4>Recent Posts</h4>
+                                    <div class="recent-posts">
+                                        {% for post in posts %}
+                                        <div class="recent-post-item">
+                                            <a href="{% url 'news_detail' id=post.id %}"><img class="border" src="{{post.thumbnail.url}}" alt="" height="81px" width="100px"></a>
+                                            <h6><a href="{% url 'news_detail' id=post.id %}">{{post.title}}</a></h6>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+                <!--End of Blog Details Area-->
+
+
+{% endblock bodycontent %}
