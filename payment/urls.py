@@ -1,8 +1,9 @@
 from django.conf.urls import url
+from django.urls import include, path
 
 from payment import views
 
 
 urlpatterns = [
-    url(r'transaction/$', views.paystack_callback),
+    path('transaction/', views.paystack_callback),
 ]

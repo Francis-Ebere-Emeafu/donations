@@ -25,7 +25,7 @@ SECRET_KEY = 'c*#lf1)pwtjmayv-6hyl4y3+b*pyn-d=$7z^s$poh)3(=ci2@3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['staging.atheist.org.ng', 'www.atheist.org.ng', 'atheist.org.ng', 'localhost', '127.0.0.1', '167.172.156.45', 'atheist.everyday.com.ng']
+ALLOWED_HOSTS = ['www.atheist.org.ng', 'atheist.org.ng', 'localhost', '127.0.0.1', '167.172.156.45']
 
 SITE_ID = 1
 

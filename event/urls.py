@@ -1,9 +1,10 @@
 from django.conf.urls import url
+from django.urls import include, path
 
 from event import views
 
 
 urlpatterns = [
-    url(r'^meetups/$', views.meetup_list, name='meetups'),
-    url(r'^events/$', views.event_list, name='events'),
+    path('meetups/', views.meetup_list, name='meetups'),
+    path('events/', views.event_list, name='events'),
 ]
